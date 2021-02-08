@@ -1,0 +1,160 @@
+\hypertarget{circular__buffer_8h}{}\doxysection{circular\+\_\+buffer.\+h File Reference}
+\label{circular__buffer_8h}\index{circular\_buffer.h@{circular\_buffer.h}}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcircular__buffer}{circular\+\_\+buffer}}
+\begin{DoxyCompactList}\small\item\em Structure for circular buffer that can hold any type of object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{circular__buffer_8h_a2f660a6797ab03b717d93b5abc07e790}\label{circular__buffer_8h_a2f660a6797ab03b717d93b5abc07e790}} 
+typedef struct \mbox{\hyperlink{structcircular__buffer}{circular\+\_\+buffer}} \mbox{\hyperlink{circular__buffer_8h_a2f660a6797ab03b717d93b5abc07e790}{circular\+\_\+buffer\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Structure for circular buffer that can hold any type of object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{circular__buffer_8h_ac11713303308d98392e015c0586a9037}\label{circular__buffer_8h_ac11713303308d98392e015c0586a9037}} 
+typedef enum \mbox{\hyperlink{circular__buffer_8h_a5f45e335bd29e200a698ee26a4f52346}{C\+B\+\_\+\+Status\+Message}} \mbox{\hyperlink{circular__buffer_8h_ac11713303308d98392e015c0586a9037}{C\+B\+\_\+\+Status\+Message\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em return status message of some functions \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{circular__buffer_8h_a5f45e335bd29e200a698ee26a4f52346}\label{circular__buffer_8h_a5f45e335bd29e200a698ee26a4f52346}} 
+enum \mbox{\hyperlink{circular__buffer_8h_a5f45e335bd29e200a698ee26a4f52346}{C\+B\+\_\+\+Status\+Message}} \{ {\bfseries M\+S\+\_\+\+OK}, 
+{\bfseries M\+S\+\_\+\+E\+R\+R\+OR}
+ \}
+\begin{DoxyCompactList}\small\item\em return status message of some functions \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{circular__buffer_8h_ac11713303308d98392e015c0586a9037}{C\+B\+\_\+\+Status\+Message\+\_\+t}} \mbox{\hyperlink{circular__buffer_8h_a7341be24930b21c188d38e918475720a}{init\+\_\+\+CB}} (\mbox{\hyperlink{circular__buffer_8h_a2f660a6797ab03b717d93b5abc07e790}{circular\+\_\+buffer\+\_\+t}} $\ast$cb, size\+\_\+t capacity)
+\begin{DoxyCompactList}\small\item\em Function for initialization of the circular buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{circular__buffer_8h_ac11713303308d98392e015c0586a9037}{C\+B\+\_\+\+Status\+Message\+\_\+t}} \mbox{\hyperlink{circular__buffer_8h_a0cd402749c474cfcd32b155e2e10ffd3}{C\+B\+\_\+put}} (\mbox{\hyperlink{circular__buffer_8h_a2f660a6797ab03b717d93b5abc07e790}{circular\+\_\+buffer\+\_\+t}} $\ast$cb, void $\ast$item)
+\begin{DoxyCompactList}\small\item\em Function for adding one item to the buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{circular__buffer_8h_ac11713303308d98392e015c0586a9037}{C\+B\+\_\+\+Status\+Message\+\_\+t}} \mbox{\hyperlink{circular__buffer_8h_ada7f8b98a82080f6184b70bc1bd82b91}{C\+B\+\_\+get}} (\mbox{\hyperlink{circular__buffer_8h_a2f660a6797ab03b717d93b5abc07e790}{circular\+\_\+buffer\+\_\+t}} $\ast$cb, void $\ast$item)
+\begin{DoxyCompactList}\small\item\em Function for reading one item from the buffer. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{circular__buffer_8h_ad8b68200a6fb587975bf67884f6bdca8}{C\+B\+\_\+\+Get\+Size}} (\mbox{\hyperlink{circular__buffer_8h_a2f660a6797ab03b717d93b5abc07e790}{circular\+\_\+buffer\+\_\+t}} $\ast$cb)
+\begin{DoxyCompactList}\small\item\em Function for reading current size of buffer. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{circular__buffer_8h_a57326f8965382bae60059f37a07debf5}{C\+B\+\_\+is\+Full}} (\mbox{\hyperlink{circular__buffer_8h_a2f660a6797ab03b717d93b5abc07e790}{circular\+\_\+buffer\+\_\+t}} $\ast$cb)
+\begin{DoxyCompactList}\small\item\em Function for checking if buffer is full. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{circular__buffer_8h_a39f2aadd6d1342c7da0d13d44f235049}{C\+B\+\_\+is\+Empty}} (\mbox{\hyperlink{circular__buffer_8h_a2f660a6797ab03b717d93b5abc07e790}{circular\+\_\+buffer\+\_\+t}} $\ast$cb)
+\begin{DoxyCompactList}\small\item\em Function for checking if buffer is empty. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{circular__buffer_8h_ada7f8b98a82080f6184b70bc1bd82b91}\label{circular__buffer_8h_ada7f8b98a82080f6184b70bc1bd82b91}} 
+\index{circular\_buffer.h@{circular\_buffer.h}!CB\_get@{CB\_get}}
+\index{CB\_get@{CB\_get}!circular\_buffer.h@{circular\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{CB\_get()}{CB\_get()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{circular__buffer_8h_ac11713303308d98392e015c0586a9037}{C\+B\+\_\+\+Status\+Message\+\_\+t}} C\+B\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{circular__buffer_8h_a2f660a6797ab03b717d93b5abc07e790}{circular\+\_\+buffer\+\_\+t}} $\ast$}]{cb,  }\item[{void $\ast$}]{item }\end{DoxyParamCaption})}
+
+
+
+Function for reading one item from the buffer. 
+
+After reading item from the buffer, Head\+Ptr will be incremented and count field will be decremented. If buffer is empty Head\+Ptr cant be incremented.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cb} & Pointer to the circular buffer from which you want to read item. \\
+\hline
+\mbox{\texttt{ in}}  & {\em item} & Pointer to the var where you want to push the read item . \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a status message of function -- M\+S\+\_\+\+OK or M\+S\+\_\+\+E\+R\+R\+OR. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{circular__buffer_8h_ad8b68200a6fb587975bf67884f6bdca8}\label{circular__buffer_8h_ad8b68200a6fb587975bf67884f6bdca8}} 
+\index{circular\_buffer.h@{circular\_buffer.h}!CB\_GetSize@{CB\_GetSize}}
+\index{CB\_GetSize@{CB\_GetSize}!circular\_buffer.h@{circular\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{CB\_GetSize()}{CB\_GetSize()}}
+{\footnotesize\ttfamily uint16\+\_\+t C\+B\+\_\+\+Get\+Size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{circular__buffer_8h_a2f660a6797ab03b717d93b5abc07e790}{circular\+\_\+buffer\+\_\+t}} $\ast$}]{cb }\end{DoxyParamCaption})}
+
+
+
+Function for reading current size of buffer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cb} & Pointer to the circular buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+current size of the buffer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{circular__buffer_8h_a39f2aadd6d1342c7da0d13d44f235049}\label{circular__buffer_8h_a39f2aadd6d1342c7da0d13d44f235049}} 
+\index{circular\_buffer.h@{circular\_buffer.h}!CB\_isEmpty@{CB\_isEmpty}}
+\index{CB\_isEmpty@{CB\_isEmpty}!circular\_buffer.h@{circular\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{CB\_isEmpty()}{CB\_isEmpty()}}
+{\footnotesize\ttfamily bool C\+B\+\_\+is\+Empty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{circular__buffer_8h_a2f660a6797ab03b717d93b5abc07e790}{circular\+\_\+buffer\+\_\+t}} $\ast$}]{cb }\end{DoxyParamCaption})}
+
+
+
+Function for checking if buffer is empty. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cb} & Pointer to the circular buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if buffer is empty, false if it\textquotesingle{}s not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{circular__buffer_8h_a57326f8965382bae60059f37a07debf5}\label{circular__buffer_8h_a57326f8965382bae60059f37a07debf5}} 
+\index{circular\_buffer.h@{circular\_buffer.h}!CB\_isFull@{CB\_isFull}}
+\index{CB\_isFull@{CB\_isFull}!circular\_buffer.h@{circular\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{CB\_isFull()}{CB\_isFull()}}
+{\footnotesize\ttfamily bool C\+B\+\_\+is\+Full (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{circular__buffer_8h_a2f660a6797ab03b717d93b5abc07e790}{circular\+\_\+buffer\+\_\+t}} $\ast$}]{cb }\end{DoxyParamCaption})}
+
+
+
+Function for checking if buffer is full. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cb} & Pointer to the circular buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if buffer is full, false if it\textquotesingle{}s not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{circular__buffer_8h_a0cd402749c474cfcd32b155e2e10ffd3}\label{circular__buffer_8h_a0cd402749c474cfcd32b155e2e10ffd3}} 
+\index{circular\_buffer.h@{circular\_buffer.h}!CB\_put@{CB\_put}}
+\index{CB\_put@{CB\_put}!circular\_buffer.h@{circular\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{CB\_put()}{CB\_put()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{circular__buffer_8h_ac11713303308d98392e015c0586a9037}{C\+B\+\_\+\+Status\+Message\+\_\+t}} C\+B\+\_\+put (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{circular__buffer_8h_a2f660a6797ab03b717d93b5abc07e790}{circular\+\_\+buffer\+\_\+t}} $\ast$}]{cb,  }\item[{void $\ast$}]{item }\end{DoxyParamCaption})}
+
+
+
+Function for adding one item to the buffer. 
+
+After pushing item to the buffer count will be incremented for one and tail\+Ptr will be incremented for object\+Size. If buffer is full the oldest item will be overwritten, if head\+Ptr is at the oldest item in the moment of overwritting head\+Ptr will be incremmented for and count field wont.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cb} & Pointer to the circular buffer to which you want to add item \\
+\hline
+\mbox{\texttt{ in}}  & {\em item} & pointer to the Item you want add to the buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a status message of function -- M\+S\+\_\+\+OK or M\+S\+\_\+\+E\+R\+R\+OR 
+\end{DoxyReturn}
+\mbox{\Hypertarget{circular__buffer_8h_a7341be24930b21c188d38e918475720a}\label{circular__buffer_8h_a7341be24930b21c188d38e918475720a}} 
+\index{circular\_buffer.h@{circular\_buffer.h}!init\_CB@{init\_CB}}
+\index{init\_CB@{init\_CB}!circular\_buffer.h@{circular\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{init\_CB()}{init\_CB()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{circular__buffer_8h_ac11713303308d98392e015c0586a9037}{C\+B\+\_\+\+Status\+Message\+\_\+t}} init\+\_\+\+CB (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{circular__buffer_8h_a2f660a6797ab03b717d93b5abc07e790}{circular\+\_\+buffer\+\_\+t}} $\ast$}]{cb,  }\item[{size\+\_\+t}]{capacity }\end{DoxyParamCaption})}
+
+
+
+Function for initialization of the circular buffer. 
+
+The end of buffer will be capacity $\ast$ object\+Size. At the beggining pointer value of head\+Ptr and tail\+Ptr will be the same. 
+\begin{DoxyParams}{Parameters}
+{\em cb} & Pointer to the circular buffer. \\
+\hline
+{\em capacity} & Number of items you want to have in buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a status message of function -- M\+S\+\_\+\+OK or M\+S\+\_\+\+E\+R\+R\+OR. 
+\end{DoxyReturn}

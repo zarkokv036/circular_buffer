@@ -1,0 +1,54 @@
+---
+:source:
+  :path: test
+  :file: test_circular_buffer.c
+:successes:
+- :test: test_initFunction
+  :line: 60
+  :message: ''
+  :unity_test_time: 0
+- :test: test_inputParametars_of_putFunction
+  :line: 101
+  :message: ''
+  :unity_test_time: 0
+- :test: test_of_putFunction
+  :line: 122
+  :message: ''
+  :unity_test_time: 0
+- :test: test_isEmptyFunction_isFullFunction
+  :line: 189
+  :message: ''
+  :unity_test_time: 0
+- :test: test_inputParametars_getFunction
+  :line: 247
+  :message: ''
+  :unity_test_time: 0
+- :test: test_indexesWith_getAndPutFunction
+  :line: 271
+  :message: ''
+  :unity_test_time: 0
+- :test: test_inputParametars_getSizeFunction
+  :line: 318
+  :message: ''
+  :unity_test_time: 0
+- :test: test_getSizeFunction
+  :line: 344
+  :message: ''
+  :unity_test_time: 0
+- :test: test_bufferWithOneElement
+  :line: 393
+  :message: ''
+  :unity_test_time: 0
+:failures:
+- :test: test_ForgetsOldest_putFunction
+  :line: 153
+  :message: Unity Double Precision Disabled
+  :unity_test_time: 0
+:ignores: []
+:counts:
+  :total: 10
+  :passed: 9
+  :failed: 1
+  :ignored: 0
+:stdout: []
+:time: 0.01980080000066664
